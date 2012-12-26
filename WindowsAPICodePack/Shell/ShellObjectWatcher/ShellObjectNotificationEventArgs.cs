@@ -3,7 +3,7 @@
 namespace Microsoft.WindowsAPICodePack.Shell
 {
     /// <summary>
-    /// Base class for the Event Args for change notifications raised by <typeparamref name="ShellObjectWatcher"/>.
+    /// Base class for the Event Args for change notifications raised by ShellObjectWatcher.
     /// </summary>
     public class ShellObjectNotificationEventArgs : EventArgs
     {
