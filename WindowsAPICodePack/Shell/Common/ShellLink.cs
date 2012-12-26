@@ -1,6 +1,7 @@
 ﻿//Copyright (c) Microsoft Corporation.  All rights reserved.
 
 using System;
+using System.Runtime.InteropServices;
 
 namespace Microsoft.WindowsAPICodePack.Shell
 {
@@ -140,4 +141,24 @@ namespace Microsoft.WindowsAPICodePack.Shell
 
         #endregion
     }
+
+#pragma warning disable 1591
+    [ComImport(),
+    InterfaceType(ComInterfaceType.InterfaceIsIUnknown),
+    Guid("45E2b4AE-B1C3-11D0-B92F-00A0C90312E1")]
+    public interface IShellLinkDataList
+    {
+        [PreserveSig]
+        void AddDataBlock(IntPtr pDataBlock);
+        [PreserveSig]
+        void CopyDataBlock(uint Signature, out IntPtr ppDataBlock);
+        [PreserveSig]
+        void RemoveDataBlock(uint Signature);
+        [PreserveSig]
+        void GetFlags(out int Flags);
+        [PreserveSig]
+        void SetFlags(uint Flags);
+    }
+#pragma warning restore 1591
+
 }

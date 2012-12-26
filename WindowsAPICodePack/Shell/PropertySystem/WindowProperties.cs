@@ -18,7 +18,7 @@ namespace Microsoft.WindowsAPICodePack.Shell.PropertySystem
         /// <param name="propKey">The property to set</param>
         /// <param name="windowHandle">Handle to the window that the property will be set on</param>
         /// <param name="value">The value to set for the property</param>
-        public static void SetWindowProperty(IntPtr windowHandle, PropertyKey propKey, string value)
+        public static void SetWindowProperty(IntPtr windowHandle, PropertyKey propKey, object value)
         {
             TaskbarNativeMethods.SetWindowProperty(windowHandle, propKey, value);
         }
@@ -29,7 +29,7 @@ namespace Microsoft.WindowsAPICodePack.Shell.PropertySystem
         /// <param name="propKey">The property to set</param>
         /// <param name="window">Window that the property will be set on</param>
         /// <param name="value">The value to set for the property</param>
-        public static void SetWindowProperty(Window window, PropertyKey propKey, string value)
+        public static void SetWindowProperty(Window window, PropertyKey propKey, object value)
         {
             TaskbarNativeMethods.SetWindowProperty((new WindowInteropHelper(window)).Handle, propKey, value);
         }

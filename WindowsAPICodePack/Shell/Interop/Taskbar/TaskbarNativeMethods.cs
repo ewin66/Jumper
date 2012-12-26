@@ -149,13 +149,13 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
             SetWindowProperty(hwnd, SystemProperties.System.AppUserModel.ID, appId);
         }
 
-        internal static void SetWindowProperty(IntPtr hwnd, PropertyKey propkey, string value)
+        internal static void SetWindowProperty(IntPtr hwnd, PropertyKey propkey, object value)
         {
             // Get the IPropertyStore for the given window handle
             IPropertyStore propStore = GetWindowPropertyStore(hwnd);
 
             // Set the value
-            using (PropVariant pv = new PropVariant(value))
+            using (PropVariant pv = PropVariant.FromObject(value))
             {
                 HResult result = propStore.SetValue(ref propkey, pv);
                 if (!CoreErrorHelper.Succeeded(result))

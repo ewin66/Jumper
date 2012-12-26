@@ -126,4 +126,47 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// </summary>
         DirectSingleWriterMultipleReader = 0x00400000
     };
+
+#pragma warning disable 1591
+    /// <summary>
+    /// The SLDF constants are flags that represent shell link options 
+    /// </summary>
+    [Flags]
+    public enum ShellLinkDataFlags
+    {
+        None = 0x00000000,
+        Default = 0x00000000,
+        HasIdList = 0x00000001,
+        HasLinkInfo = 0x00000002,
+        HasName = 0x00000004,
+        HasRelativePath = 0x00000008,
+        HasWorkingDirectory = 0x00000010,
+        HasArguments = 0x00000020,
+        HasIconLocation = 0x00000040,
+        Unicode = 0x00000080,
+        ForceNoLinkInfo = 0x00000100,
+        HasExpSz = 0x00000200,
+        RunInSeparate = 0x00000400,
+        HasLogo3Id = 0x00000800,
+        HasDarwinId = 0x00001000,
+        RunAs = 0x00002000,
+        HasExpIconSz = 0x00004000,
+        NoPidlAlias = 0x00008000,
+        ForceUncName = 0x00010000,
+        RunWithShimLayer = 0x00020000,
+        ForceNoLinkTrack = 0x00040000,
+        EnableTargetMetadata = 0x000800000,
+        DisableLinkPathTracking = 0x00100000,
+        DisableKnownFolderRelativeTracking = 0x00200000,
+        NoKfAlias = 0x00400000,
+        AllowLinkToLink = 0x00800000,
+        UnaliasOnSave = 0x01000000,
+        PreferEnvironmentPath = 0x02000000,
+        KeepLocalIdListForUncTarget = 0x04000000,
+        PersistVolumeIdRelative = 0x08000000,
+        Valid = 0x0FFFF7FF,
+        Reserved = -0x7FFFFFFF,
+    }
+#pragma warning restore 1591
+
 }

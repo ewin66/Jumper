@@ -2,7 +2,8 @@
 
 namespace Microsoft.WindowsAPICodePack.Shell
 {
-    internal static class ShellIIDGuid
+#pragma warning disable 1591
+    public static class ShellIIDGuid
     {
 
         // IID GUID strings for relevant Shell COM interfaces.
@@ -24,7 +25,8 @@ namespace Microsoft.WindowsAPICodePack.Shell
         internal const string IShellFolder2 = "93F2F68C-1D1B-11D3-A30E-00C04F79ABD1";
         internal const string IEnumIDList = "000214F2-0000-0000-C000-000000000046";
         internal const string IShellLinkW = "000214F9-0000-0000-C000-000000000046";
-        internal const string CShellLink = "00021401-0000-0000-C000-000000000046";
+        public const string CShellLink = "00021401-0000-0000-C000-000000000046";
+        public const string IShellLinkDataList = "45E2b4AE-B1C3-11D0-B92F-00A0C90312E1";
 
         internal const string IPropertyStore = "886D8EEB-8CF2-4446-8D02-CDBA1DBDCF99";
         internal const string IPropertyStoreCache = "3017056d-9a91-4e90-937d-746c72abbf4f";
@@ -47,6 +49,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
         internal const string IQueryParser = "2EBDEE67-3505-43f8-9946-EA44ABC8E5B0";
         internal const string IQueryParserManager = "A879E3C4-AF77-44fb-8F37-EBD1487CF920";
     }
+#pragma warning restore 1591
 
     internal static class ShellCLSIDGuid
     {
